@@ -74,8 +74,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Typing Animation
-const text1 = "Software Engineer & Full Stack Web Developer";
-const text2 = "Coming Soon......!!!";
+const text1 = "Aspiring Software Engineer";
+const text2 = "C o m i n g   S o o n. . . . . . ! ! !";
 const typingElement1 = document.querySelector('.about');
 const typingElement2 = document.querySelector('.soon');
 let i = 0;
@@ -90,13 +90,16 @@ function typeWriter1() {
 
 let j=0;
 function typeWriter2() {
-    if (j < text2.length) {
+    if(j < text2.length) {
         typingElement2.textContent += text2.charAt(j);
         j++;
-        setTimeout(typeWriter2, 100);
+    }
+    if(j===text2.length){
+        j=0;
+        document.querySelector('.soon').innerHTML="";
     }
 }
-
+// setInterval(typeWriter2, 100);
 // Start typing animation when page loads
 window.addEventListener('load', () => {
     typingElement1.textContent = '';
@@ -106,6 +109,7 @@ window.addEventListener('load', () => {
 window.addEventListener('load', () => {
     typingElement2.textContent = '';
     typeWriter2();
+    setInterval(typeWriter2, 100);
 });
 
 // Intersection Observer for fade-in animations
