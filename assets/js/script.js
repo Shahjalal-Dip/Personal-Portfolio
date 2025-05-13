@@ -2,9 +2,8 @@ console.log("Script running...")
 
 // DOM Elements
 const hamburger = document.querySelector('.hamburger');
-const ham = document.querySelector('.ham');
-const cross = document.querySelector('.cross');
 const sidebar = document.querySelector('.sidebar');
+const closeBtn = document.querySelector('.sidebar .close-btn');
 const icon = document.getElementById('icon');
 const main = document.querySelector('.main');
 const body = document.body;
@@ -14,10 +13,10 @@ const isMobile = window.innerWidth <= 768;
 
 // Initial sidebar state
 if (isMobile) {
-    sidebar.classList.add('sidebarGo');
+    sidebar.classList.remove('active');
     hamburger.style.display = 'block';
 } else {
-    sidebar.classList.remove('sidebarGo');
+    sidebar.classList.add('active');
     hamburger.style.display = 'none';
 }
 
@@ -30,24 +29,24 @@ if (savedTheme === 'dark') {
 
 // Toggle Sidebar
 hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('sidebarGo');
-    if (sidebar.classList.contains('sidebarGo')) {
-        ham.style.display = 'block';
-        cross.style.display = 'none';
-    } else {
-        ham.style.display = 'none';
-        cross.style.display = 'block';
-    }
+    sidebar.classList.add('active');
+    hamburger.style.display = 'none';
+});
+
+// Close Sidebar
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    hamburger.style.display = 'block';
 });
 
 // Handle window resize
 window.addEventListener('resize', () => {
     const isMobile = window.innerWidth <= 768;
     if (isMobile) {
-        sidebar.classList.add('sidebarGo');
+        sidebar.classList.remove('active');
         hamburger.style.display = 'block';
     } else {
-        sidebar.classList.remove('sidebarGo');
+        sidebar.classList.add('active');
         hamburger.style.display = 'none';
     }
 });
@@ -75,7 +74,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Typing Animation
-const text = "Web Developer & Software Engineer";
+const text = "Software Engineer & Full Stack Web Developer";
 const typingElement = document.querySelector('.about');
 let i = 0;
 
@@ -95,13 +94,22 @@ window.addEventListener('load', () => {
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('animate');
+            // Set the progress width after a small delay to ensure animation works
+            setTimeout(() => {
+                const progressBar = entry.target.querySelector('.skill-progress');
+                if (progressBar) {
+                    const progress = progressBar.style.getPropertyValue('--progress');
+                    progressBar.style.width = progress;
+                }
+            }, 100);
             observer.unobserve(entry.target);
         }
     });
