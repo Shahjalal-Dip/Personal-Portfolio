@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,20 @@
     <title>About Me | Shahjalal Dip</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <div class="scroll-progress"></div>
     <div class="container">
-        <div class="sidebar sidebarGo">
+        <div class="sidebar">
+            <div class="close-btn">
+                <img src="assets/images/delete.png" alt="Close" height="25px">
+            </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="./intro.html"><i class="fas fa-user"></i> My Intro</a></li>
                     <li><a href="./services.html"><i class="fas fa-cogs"></i> Services</a></li>
                     <li><a href="./blog.html"><i class="fas fa-blog"></i> Blog</a></li>
@@ -35,20 +42,41 @@
                     <h1>About Me</h1>
                     <div class="about-content">
                         <div class="about-text">
-                            <p>Hello! I'm Shahjalal Dip, a passionate Web Developer and Software Engineer based in Dhaka, Bangladesh. With a strong foundation in both front-end and back-end development, I create engaging and efficient web solutions that help businesses grow.</p>
-                            <p>My journey in web development started with a curiosity about how websites work, which led me to dive deep into programming and software development. I believe in writing clean, maintainable code and creating user-friendly interfaces that provide exceptional user experiences.</p>
+                            <p>Hello! I'm Shah Jalal Dip, an enthusiastic Computer Science undergraduate at American
+                                International University-Bangladesh (AIUB), currently in my 6th semester. I’m passionate
+                                about building software that solves real-world problems and enhances user experience.
+
+                                Over the past year, I've immersed myself in competitive programming, sharpening my
+                                problem-solving skills through platforms like Codeforces and LeetCode. I enjoy tackling
+                                challenging algorithmic problems and constantly strive to improve my logical thinking
+                                and coding abilities.
+
+                                In parallel, I’ve been developing my skills in web development, working on full-stack
+                                projects using technologies like HTML, CSS, JavaScript, React, Node.js, PostgreSQL, and
+                                the PERN stack. One of my recent projects includes a Weather App built with PERN,
+                                showcasing both frontend design and backend integration.
+
+                                I’ve also worked on academic projects such as a University Dashboard and an E-Commerce
+                                Management System, applying object-oriented principles and database design without
+                                relying on external frameworks.
+
+                                Whether it’s through coding, debugging, or deploying applications, I enjoy every step of
+                                the development journey. I’m eager to keep learning, contributing to open-source, and
+                                eventually grow into a skilled software engineer.
+
+                            </p>
                         </div>
                         <div class="about-stats">
                             <div class="stat-item">
-                                <span class="stat-number">3+</span>
+                                <span class="stat-number">1+</span>
                                 <span class="stat-label">Years Experience</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">50+</span>
+                                <span class="stat-number">10+</span>
                                 <span class="stat-label">Projects Completed</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">30+</span>
+                                <span class="stat-number">20+</span>
                                 <span class="stat-label">Happy Clients</span>
                             </div>
                         </div>
@@ -65,28 +93,28 @@
                                     <i class="fab fa-html5"></i>
                                     <span>HTML5</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 95%"></div>
+                                        <div class="skill-progress" style="--progress: 95%"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <i class="fab fa-css3-alt"></i>
                                     <span>CSS3</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 90%"></div>
+                                        <div class="skill-progress" style="--progress: 85%"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <i class="fab fa-js"></i>
                                     <span>JavaScript</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 85%"></div>
+                                        <div class="skill-progress" style="--progress: 85%"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <i class="fab fa-react"></i>
                                     <span>React</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 80%"></div>
+                                        <div class="skill-progress" style="--progress: 80%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -99,21 +127,21 @@
                                     <i class="fab fa-node-js"></i>
                                     <span>Node.js</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 85%"></div>
+                                        <div class="skill-progress" style="--progress: 70%"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <i class="fas fa-database"></i>
-                                    <span>MongoDB</span>
+                                    <span>PostgreSQL</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 80%"></div>
+                                        <div class="skill-progress" style="--progress: 90%"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <i class="fas fa-server"></i>
                                     <span>Express.js</span>
                                     <div class="skill-level">
-                                        <div class="skill-progress" style="width: 85%"></div>
+                                        <div class="skill-progress" style="--progress: 75%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -121,16 +149,18 @@
                     </div>
                 </section>
 
-                <section class="experience-section">
+                <section class="experience-section" style="justify-items: center;">
                     <h2>Work Experience</h2>
-                    <div class="timeline">
+                    <b><i class="soon" style="color: rgb(243, 175, 73);">Coming Soon......</i>></b>
+                    <!-- <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h3>Senior Web Developer</h3>
                                 <h4>Tech Solutions Inc.</h4>
                                 <p class="timeline-date">2022 - Present</p>
-                                <p>Leading development of enterprise web applications, mentoring junior developers, and implementing best practices in web development.</p>
+                                <p>Leading development of enterprise web applications, mentoring junior developers, and
+                                    implementing best practices in web development.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -139,10 +169,11 @@
                                 <h3>Web Developer</h3>
                                 <h4>Digital Creations</h4>
                                 <p class="timeline-date">2020 - 2022</p>
-                                <p>Developed and maintained multiple client websites, implemented responsive designs, and optimized website performance.</p>
+                                <p>Developed and maintained multiple client websites, implemented responsive designs,
+                                    and optimized website performance.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
 
                 <section class="education-section">
@@ -161,4 +192,5 @@
     </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
