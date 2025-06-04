@@ -75,7 +75,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Typing Animation
 const text1 = "Aspiring Software Engineer";
-const text2 = "C o m i n g   S o o n. . . . . . ! ! !";
+const text2 = "In Sha Allah Coming Soon. . . . . . ! ! !";
 const typingElement1 = document.querySelector('.about');
 const typingElement2 = document.querySelector('.soon');
 let i = 0;
